@@ -137,6 +137,13 @@ footer{
     max-width: 100%;
 }
 
+#busqueda{
+    background-color: #fcdae8;
+    border: none;
+    border-bottom: 2px solid grey;
+    border-radius: 20px;
+}
+
 /*CATEGORÍA.HTML*/
 .imagen2{
     color: #666;
