@@ -171,11 +171,8 @@ footer{
     margin-bottom: 10px;
 }
 
-formLogin2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 30px;
+#formLogin3{
+    padding-top: 15px;
 }
 
 #formLogin{
@@ -185,7 +182,13 @@ formLogin2{
     padding-bottom: 20px;
 }
 
-
+#boton{
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: white;
+}
 
 /*CATEGORÍA.HTML*/
 .imagen2{
