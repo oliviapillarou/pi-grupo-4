@@ -184,3 +184,62 @@ footer{
     flex-direction: row;
     align-items: flex-start;
 }
+
+/*CPRODUCT.HTML*/
+.fila_product {
+    display: flex;
+    flex-direction: row;
+    align-items: top center;
+    flex-wrap: wrap;
+    margin: 0px 0px 30px 0px;
+    justify-content: space-between;
+    font-optical-sizing: 20px;
+    align-items: center;
+    font-weight: 10px;
+    font-style: normal;
+    width: 72%;
+    max-width: 72%;
+    background-color: white;
+}
+
+#img_detalle {
+    width: 95%;
+    margin-bottom: 0%;
+}
+.product_detalle {
+    width: 47%;
+}
+.stock {
+    margin-left: 5%;
+    margin-top: 0%;
+    line-height: 8px;
+}
+.tags {
+    color: blue;
+}
+
+.mascarilla0 {
+    width: 47%;
+}
+.rating {
+    width: 30%;
+    margin-right: 10%;
+    height: 30px;
+}
+.review {
+    margin-right: 5%;
+}
+.natalia {
+    color: #666;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    font-size: 15px;
+}
+
+.fecha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0%;
+}
