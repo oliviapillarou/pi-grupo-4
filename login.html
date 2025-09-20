@@ -14,32 +14,45 @@
 <body>
     <header>
         <nav>
-            <section>
+            <section id="section0">
                 <a href="./index.html"><img src="./img/logo.png" alt="logo" id="logo"></a>
+                <a id="moliskinco" href="./index.html">MOLI SKIN COSMETICS</a>
             </section>
-            <h1>MOLI SKIN COSMETICS</h1>
+            <form action="search-results.html">
+                <label for="busqueda"></label>
+                <input id="busqueda" type="search" name="Búsqueda" placeholder="Buscar" value="">
+            </form>
             <ul class="lista1">
                 <li><a href="login.html">LOGIN</a> /</li>
                 <li><a href="register.html">REGISTER</a></li>
             </ul>
         </nav>
     </header>
-
-    <main id="mainLogin">
-        <h2>Log In</h2>
-        <form id="formLogin" action="index.html">
-             <input id="mail" type="email" name="mail" placeholder="Ingrese su mail:" value="">
-             <input id="contra" type="password" name="contra" placeholder="Ingrese su contrasena:" value="">
-        </form>
-        <form id="formLogin2" action="index.html">
-            <input type="radio" name="Info" id="Info">
-            <label for="Info">Recordar informacion</label>
-        </form>
-        <form id="formLogin3" action="index.html">
-           <button id="boton" type="submit">Enviar</button>
-        </form>
-        <a href="register.html"><h6>No tengo cuenta</h6></a>
-    </main>
+    <section id="sectiontodo">
+        <section id="section1">
+           <h3 class="menu"><a href="./category.html">BODYCARE</a></h3>
+           <h3 class="menu"><a href="./category.html">HAIRCARE</a></h3>
+           <h3 class="menu"><a href="./category.html">MAKEUP</a></h3>
+           <h3 class="menu"><a href="./category.html">SKINCARE</a></h3>
+        </section>
+        <section class="fila">
+             <main id="mainlogin">
+                <h2>Log In</h2>
+                <form id="formLogin" action="index.html">
+                <input id="mail" type="email" name="mail" placeholder="Ingrese su mail" value="">
+                <input id="contra" type="password" name="contra" placeholder="Ingrese su contrasena" value="">
+            </form>
+            <form id="formLogin2" action="index.html">
+                <input type="radio" name="Info" id="Info">
+                <label for="Info">Recordar informacion</label>
+            </form>
+            <form id="formLogin3" action="index.html">
+                <button id="boton" type="submit">Enviar</button>
+            </form>
+            <a href="register.html"><h6>No tengo cuenta</h6></a>
+            </main>
+        </section>
+    </section>
         
  <footer>
         <p>Olivia Pillarou | Morena Palazzo | Juan Ignacio Garriga | 2025</p>
