@@ -183,6 +183,23 @@ footer{
     border-radius: 20%;
 }
 
+#mainlogin2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 425px;
+    width: 1118px;
+    margin-bottom: 10px;
+    margin-top: 2%;
+    margin-right: 30%;
+    margin-left: 30%;
+    border: solid 2px black;
+    border-radius: 20%;
+
+#seleccione{
+    margin-bottom: 5px;
+}
+
 #formLogin3{
     padding-top: 15px;
 }
@@ -200,6 +217,16 @@ footer{
     height: 30px;
     border-radius: 15px;
     background-color: white;
+}
+
+#pais{
+    margin-bottom: 10px;
+     background-color: #fcdae8;
+    border: none;
+    border-bottom: 2px solid grey;
+    height: 30px;
+    width: 200px;
+
 }
 
 /* PRODUCT.HTML */
