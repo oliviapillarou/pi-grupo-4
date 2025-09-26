@@ -20,10 +20,12 @@
                 <a href="./index.html"><img src="./img/logo.png" alt="logo" id="logo"></a>
                 <a id="moliskinco" href="./index.html">MOLI SKIN COSMETICS</a>
             </section>
-            <form action="search-results.html" class="search">
-                <label for="busqueda"></label>
-                <input id="busqueda" type="search" name="Búsqueda" placeholder="Buscar" value="">
-            </form>
+            <section class="sectionbuscador">
+                <form action="search-results.html" class="search" method="get">
+                    <input type="search" name="Buscador" class="buscador" placeholder="Buscar">
+                    <button class="boton" type="submit"><img src="./img/lupa.webp" alt="lupa_buscador" class="lupa"></button>
+                </form>
+            </section>
             <ul class="lista1">
                 <li><a href="login.html">LOGIN</a> /</li>
                 <li><a href="register.html">REGISTER</a></li>
@@ -33,19 +35,21 @@
 
     <main id="sectiontodo">
         <section id="section1">
-            <h3 class="menu"><a href="./category.html">BODYCARE</a></h3>
-            <h3 class="menu"><a href="./category.html">HAIRCARE</a></h3>
-            <h3 class="menu"><a href="./category.html">MAKEUP</a></h3>
-            <h3 class="menu"><a href="./category.html">SKINCARE</a></h3>
+            <ul class="ul">
+                <li class="menu"><a href="./category.html">BODYCARE</a></li>
+                <li class="menu"><a href="./category.html">HAIRCARE</a></li>
+                <li class="menu"><a href="./category.html">HAIRCARE</a></li>
+                <li class="menu"><a href="./category.html">SKINCARE</a></li>
+            </ul>
         </section>
         <section class="fila">
             <section id="mainlogin">
                 <h2>Log In</h2>
-                <form id="formLogin" action="index.html">
+                <form id="formLogin" action="index.html" method="get">
                     <input id="mail" type="email" name="mail" placeholder="Ingrese su mail" value="" required>
-                    <input id="contra" type="password" name="contra" placeholder="Ingrese su contraseña" value="">
+                    <input id="contra" type="password" name="contra" placeholder="Ingrese su contraseña" value="" required>
                     <section id="info_boton">
-                    <input type="radio" name="Info" id="Info">
+                    <input type="radio" name="Info" id="Info" required>
                     <label for="Info">Recordar informacion</label>
                     </section>
                     <section id="enviar">

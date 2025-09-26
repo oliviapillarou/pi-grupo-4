@@ -41,6 +41,17 @@ nav {
     align-items: center;
 }
 
+.sectionbuscador{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.lupa{
+    width: 13px;
+}
+
 #logo {
     width: 105px;
     display: flex;
@@ -53,7 +64,6 @@ nav {
     flex-direction: row;
     list-style: none;
     font-weight: 5px;
-    gap: 5px;
     margin-right: 5px;
 }
 
@@ -78,6 +88,11 @@ a {
     align-items: top;
     width: 26%;
     margin-right: 2%;
+    max-width: 100%;
+}
+
+.ul{
+    padding: 0%;
 }
 
 .menu {
@@ -87,6 +102,9 @@ a {
     text-align: center;
     height: 40px;
     padding-top: 10px;
+    list-style: none;
+    margin-bottom: 40px;
+    width: 100%;
 }
 
 .vendidosyaleatorios {
@@ -148,6 +166,7 @@ footer {
 #moliskinco {
     font-weight: bold;
     align-self: center;
+    font-size: 20px;
 }
 
 /* LOGIN.HTML*/
@@ -231,6 +250,21 @@ footer {
     height: 30px;
     width: 200px;
 
+}
+
+#sectionregistro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 1118px;
+    margin-bottom: 10px;
+    margin-top: 2%;
+    margin-right: 30%;
+    margin-left: 30%;
+    border: solid 2px black;
+    border-radius: 20%;
 }
 
 /* PRODUCT.HTML */
@@ -331,7 +365,7 @@ footer {
     nav {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        margin-right: 10px;
     }
 
     #section0 {
@@ -349,11 +383,6 @@ footer {
         font-size: 18px;
         align-self: center;
         margin-left: 10%;
-    }
-
-    .search {
-        width: 100%;
-        margin: 5px 0px;
     }
 
     #busqueda {
@@ -402,7 +431,8 @@ footer {
     .vendidosyaleatorios {
         width: 100%;
         text-align: center;
-        font-size: 16px;
+        font-size: 25px;
+        margin-top: 40px;
         margin-bottom: 10px;
     }
 
@@ -441,12 +471,26 @@ footer {
         text-align: center;
     }
 
-    #mainlogin,
-    #mainlogin2 {
+    #mainlogin{
         width: 100%;
-        max-width: 300px;
-        margin: 10px auto;
+        max-width: 350px;
+        margin-left: 5px;
+        margin-right: 5px;
         padding: 20px;
+        align-self: center;
+        font-size: 20px;
+        height: 350px;
+    }
+
+     #sectionregistro{
+        width: 100%;
+        max-width: 350px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 20px;
+        align-self: center;
+        font-size: 20px;
+        height: 475px;
     }
 
     #mail,
@@ -474,5 +518,10 @@ footer {
     .resultadodebusqueda {
         margin-right: 0;
         width: 100%;
+    }
+    .sectionbuscador{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 0px;
     }
 }
