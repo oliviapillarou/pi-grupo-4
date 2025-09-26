@@ -1,4 +1,7 @@
 /*INDEX.HTML*/
+*{
+    box-sizing: border-box;
+}
 body {
     background-color: #fcdae8;
     padding-left: 10%;
@@ -6,26 +9,28 @@ body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    max-width: 100%;
+    width: 1434px;
 }
 
 header {
     background-color: white;
     max-width: 1140px;
-    width: 1118px;
+    width: 1140px;
     margin-top: 5px;
-    height: 100px;
+    height: 118px;
     align-items: center;
     padding: 1%;
     margin-bottom: 10px;
 }
 
-#section0{
+#section0 {
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
 }
 
-h1{
+h1 {
     font-size: 20px;
     align-self: center;
 }
@@ -51,6 +56,7 @@ nav {
     gap: 5px;
     margin-right: 5px;
 }
+
 a {
     color: black;
     text-decoration: none;
@@ -78,7 +84,7 @@ a {
     font-weight: normal;
     border-radius: 20px;
     text-align: center;
-    height: 30px;
+    height: 40px;
     padding-top: 10px;
 }
 
@@ -86,7 +92,8 @@ a {
     background-color: white;
     color: black;
     padding: 2%;
-    margin-right: 51%;
+    width: 60%;
+    margin-right: 40%;
 }
 
 .fila {
@@ -104,21 +111,21 @@ a {
     max-width: 72%;
 }
 
-#imagenes{
+#imagenes {
     width: 100%;
     justify-content: space-between;
 }
 
-.imagen1{
+.imagen1 {
     color: #666;
-    width: 22%; 
+    width: 25%;
     margin-right: 2%;
     margin-bottom: 5%;
     background-color: white;
     padding: 2%;
 }
 
-#verdetalle{
+#verdetalle {
     color: white;
     background-color: #444;
     text-align: center;
@@ -127,24 +134,24 @@ a {
     font-size: 12px;
 }
 
-footer{
+footer {
     background-color: white;
     border-radius: 20px;
     font-size: 15px;
     text-align: center;
     padding: 2px;
-    width: 1140px;
+    width: 1200px;
     max-width: 100%;
 }
 
-#moliskinco{
+#moliskinco {
     font-weight: bold;
     align-self: center;
 }
 
 /* LOGIN.HTML*/
 
-#busqueda{
+#busqueda {
     background-color: #fcdae8;
     border: none;
     border-bottom: 2px solid grey;
@@ -152,7 +159,7 @@ footer{
     height: 30px;
 }
 
-#mail{
+#mail {
     background-color: #fcdae8;
     border: none;
     border-bottom: 2px solid grey;
@@ -161,7 +168,7 @@ footer{
     width: 200px;
 }
 
-#contra{
+#contra {
     background-color: #fcdae8;
     border: none;
     border-bottom: 2px solid grey;
@@ -169,7 +176,7 @@ footer{
     width: 200px;
 }
 
-#mainlogin{
+#mainlogin {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,7 +190,7 @@ footer{
     border-radius: 20%;
 }
 
-#mainlogin2{
+#mainlogin2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,23 +202,24 @@ footer{
     margin-left: 30%;
     border: solid 2px black;
     border-radius: 20%;
+}
 
-#seleccione{
+#seleccione {
     margin-bottom: 5px;
 }
 
-#formLogin3{
+#formLogin3 {
     padding-top: 15px;
 }
 
-#formLogin{
+#formLogin {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 20px;
 }
 
-#boton{
+#boton {
     border: none;
     width: 100px;
     height: 30px;
@@ -219,9 +227,9 @@ footer{
     background-color: white;
 }
 
-#pais{
+#pais {
     margin-bottom: 10px;
-     background-color: #fcdae8;
+    background-color: #fcdae8;
     border: none;
     border-bottom: 2px solid grey;
     height: 30px;
@@ -250,14 +258,17 @@ footer{
     width: 95%;
     margin-bottom: 0%;
 }
+
 .product_detalle {
     width: 47%;
 }
+
 .stock {
     margin-left: 5%;
     margin-top: 0%;
     line-height: 8px;
 }
+
 .tags {
     color: blue;
 }
@@ -265,14 +276,17 @@ footer{
 .mascarilla0 {
     width: 47%;
 }
+
 .rating {
     width: 30%;
     margin-right: 10%;
     height: 30px;
 }
+
 .review {
     margin-right: 5%;
 }
+
 .natalia {
     color: #666;
     margin-bottom: 0%;
@@ -280,7 +294,7 @@ footer{
     font-size: 15px;
 }
 
-.fecha{
+.fecha {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -290,9 +304,179 @@ footer{
 
 /* SEARCH-RESULTS.HTML */
 
-.resultadodebusqueda{
+.resultadodebusqueda {
     background-color: white;
     color: black;
     padding: 2%;
     margin-right: 20%;
+}
+#error_resultado {
+    display: none;
+}
+
+/* RESPONSIVE DESIGN PARA CELULAR */
+
+@media (max-width: 420px) {
+    body {
+        padding: 2%;
+        font-size: 14px;
+        margin: 0%;
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+        padding: 2%;
+        max-width: none;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #section0 {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    #logo {
+        width: 80px;
+        margin-right: 0%;
+    }
+
+    #moliskinco {
+        font-size: 18px;
+        align-self: center;
+        margin-left: 10%;
+    }
+
+    .search {
+        width: 100%;
+        margin: 5px 0px;
+    }
+
+    #busqueda {
+        width: 100%;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .lista1 {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        margin: 0%;
+        padding-left: 0%;
+    }
+
+    .lista1 a {
+        font-size: 12px;
+    }
+
+    #sectiontodo {
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        max-width: none;
+        align-items: center;
+    }
+
+    #section1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0%;
+    }
+
+    .menu {
+        margin-bottom: 10px;
+        font-size: 12px;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 16px;
+        align-items: stretch;
+    }
+
+    .vendidosyaleatorios {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .fila {
+        width: 100%;
+        max-width: none;
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0 0 20px 0;
+    }
+
+    .imagen1 {
+        width: 100%;
+        margin: 0 0 10px 0;
+        align-items: center;
+    }
+
+    #imagenes {
+        width: 100%;
+        height: auto;
+    }
+
+    #verdetalle {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        display: block;
+    }
+
+    footer {
+        width: 100%;
+        padding: 2%;
+        max-width: none;
+        height: auto;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    #mainlogin,
+    #mainlogin2 {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 20px;
+    }
+
+    #mail,
+    #contra,
+    #pais {
+        width: 100%;
+    }
+
+    .fila_product {
+        width: 100%;
+        max-width: none;
+        flex-direction: column;
+    }
+
+    .product_detalle{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .mascarilla0 {
+        width: 98%;
+        margin-bottom: 10px;
+        padding: 2%;
+    }
+
+    .resultadodebusqueda {
+        margin-right: 0;
+        width: 100%;
+    }
 }
