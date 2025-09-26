@@ -191,21 +191,15 @@ footer {
     border: solid 2px black;
     border-radius: 20%;
 }
-
-#mainlogin2 {
+#info_boton {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 425px;
-    width: 1118px;
-    margin-bottom: 10px;
-    margin-top: 2%;
-    margin-right: 30%;
-    margin-left: 30%;
-    border: solid 2px black;
-    border-radius: 20%;
+    flex-direction: row;
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
-
+#enviar {
+    align-self: center;
+}
 #seleccione {
     margin-bottom: 5px;
 }

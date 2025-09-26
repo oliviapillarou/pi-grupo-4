@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./CSS/stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -29,35 +31,39 @@
         </nav>
     </header>
 
-    <section id="sectiontodo">
+    <main id="sectiontodo">
         <section id="section1">
-           <h3 class="menu"><a href="./category.html">BODYCARE</a></h3>
-           <h3 class="menu"><a href="./category.html">HAIRCARE</a></h3>
-           <h3 class="menu"><a href="./category.html">MAKEUP</a></h3>
-           <h3 class="menu"><a href="./category.html">SKINCARE</a></h3>
+            <h3 class="menu"><a href="./category.html">BODYCARE</a></h3>
+            <h3 class="menu"><a href="./category.html">HAIRCARE</a></h3>
+            <h3 class="menu"><a href="./category.html">MAKEUP</a></h3>
+            <h3 class="menu"><a href="./category.html">SKINCARE</a></h3>
         </section>
         <section class="fila">
-             <main id="mainlogin">
+            <section id="mainlogin">
                 <h2>Log In</h2>
                 <form id="formLogin" action="index.html">
-                <input id="mail" type="email" name="mail" placeholder="Ingrese su mail" value="">
-                <input id="contra" type="password" name="contra" placeholder="Ingrese su contraseña" value="">
-            </form>
-            <form id="formLogin2" action="index.html">
-                <input type="radio" name="Info" id="Info">
-                <label for="Info">Recordar informacion</label>
-            </form>
-            <form id="formLogin3" action="index.html">
-                <button id="boton" type="submit">Enviar</button>
-            </form>
-            <a href="register.html"><h6>No tengo cuenta</h6></a>
-            </main>
+                    <input id="mail" type="email" name="mail" placeholder="Ingrese su mail" value="" required>
+                    <input id="contra" type="password" name="contra" placeholder="Ingrese su contraseña" value="">
+                    <section id="info_boton">
+                    <input type="radio" name="Info" id="Info">
+                    <label for="Info">Recordar informacion</label>
+                    </section>
+                    <section id="enviar">
+                    <button id="boton" type="submit">Enviar</button>
+                    <a href="register.html">
+                        <h6>No tengo cuenta</h6>
+                    </a>
+                    </section>
+                </form>
+            </section>
         </section>
-    </section>
-        
-     <footer>
+    </main>
+
+    <footer>
         <p>Olivia Pillarou | Morena Palazzo | Juan Ignacio Garriga | 2025</p>
-        <p><strong>Instagram:</strong> moliskin.co | <strong>Gmail:</strong> moliskin.co@gmail.com | <strong>Número de Teléfono:</strong>  11 2684 2579 </p>
+        <p><strong>Instagram:</strong> moliskin.co | <strong>Gmail:</strong> moliskin.co@gmail.com | <strong>Número de
+                Teléfono:</strong> 11 2684 2579 </p>
     </footer>
 </body>
+
 </html>
