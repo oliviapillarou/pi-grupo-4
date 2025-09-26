@@ -66,6 +66,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
     max-width: 1140px;
     width: 1140px;
 }
@@ -179,6 +180,7 @@ footer {
 #mainlogin {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 300px;
     width: 1118px;
