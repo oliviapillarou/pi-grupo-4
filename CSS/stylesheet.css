@@ -12,6 +12,10 @@
     font-size: x-small;
 }
 
+#div4 {
+    font-size: x-small;
+}
+
 
 *{
     box-sizing: border-box;
@@ -212,6 +216,15 @@ footer {
     width: 200px;
 }
 
+#reContra {
+    background-color: #fcdae8;
+    border: none;
+    border-bottom: 2px solid grey;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 200px;
+}
+
 #mainlogin {
     display: flex;
     flex-direction: column;
@@ -253,6 +266,7 @@ footer {
 #boton {
     border: none;
     width: 100px;
+    margin-top: 10px;
     height: 30px;
     border-radius: 15px;
     background-color: white;

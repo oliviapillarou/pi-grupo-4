@@ -12,10 +12,14 @@ formulario.addEventListener("submit", function(evento) {
 
     if (mail.value == "") {
         divMail.innerText = "Complete este campo.";
+        divContra.innerText = "";
+        divContra2.innerText = "";
     }
 
     else if (contraseña.value == "") {
         divContra.innerText = "Complete este campo.";
+        divMail.innerText = "";
+         divContra2.innerText = "";
     }
 
     else if (contraseña.value.length < 6) {
