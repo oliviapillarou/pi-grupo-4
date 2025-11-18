@@ -1,4 +1,4 @@
-let datos = sessionStorage.getItem("usuario");
+let datos = localStorage.getItem("usuario");
 
 let datosObj = JSON.parse(datos);
 
