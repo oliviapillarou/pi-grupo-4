@@ -389,6 +389,14 @@ footer {
     display: none;
 }
 
+.disbuscador1{
+    display: flex;
+}
+
+.divbuscador2{
+    display: flex;
+}
+
 /* RESPONSIVE DESIGN PARA CELULAR */
 
 @media (max-width: 420px) {

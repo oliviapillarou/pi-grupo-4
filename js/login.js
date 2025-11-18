@@ -35,7 +35,7 @@ formulario.addEventListener("submit", function(evento) {
 
         let usuarioString = JSON.stringify(usuario);
 
-        sessionStorage.setItem("usuario", usuarioString);
+        localStorage.setItem("usuario", usuarioString);
 
         this.submit()
         
