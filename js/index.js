@@ -7,13 +7,12 @@ fetch("https://dummyjson.com/products/")
     })
 
     .then(function (data) {
-        console.log(data.products);
+         console.log(data);
 
-        let info = data.products;
         let beauty = ""
-        console.log(info[0])
+       
         for (let i = 0; i < 5; i++) {
-            const element = info[i];
+            const element = data.products[i];
             beauty += `<article class="imagen1">
                             <img id="imagenes" src="${element.images}" alt=''>
                             <h3>Nombre: ${element.title}</h3>
@@ -23,7 +22,7 @@ fetch("https://dummyjson.com/products/")
                         </article>`
         }
         for (let i = 0; i < 5; i++) {
-            const element = info[i];
+            const element = data.products[i];
             beauty += `<article class="imagen1">
                             <img id="imagenes" src="${element.images}" alt=''>
                             <h3>Name: ${element.title}</h3>
@@ -38,9 +37,9 @@ fetch("https://dummyjson.com/products/")
 
          /*Segunda Seccion*/
         let fragancia = ""
-        console.log(info[5])
+        console.log(data[5])
         for (let i = 5; i < 10; i++) {
-            const element = info[i];
+            const element = data.products[i];
             fragancia += `<article class="imagen1">
                             <img id="imagenes" src="${element.images}" alt=''>
                             <h3>Nombre: ${element.title}</h3>
@@ -50,7 +49,7 @@ fetch("https://dummyjson.com/products/")
                         </article>`
         }
         for (let i = 5; i < 10; i++) {
-            const element = info[i];
+            const element = data.products[i];
             fragancia += `<article class="imagen1">
                             <img id="imagenes" src="${element.images}" alt=''>
                             <h3>Nombre: ${element.title}</h3>

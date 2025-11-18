@@ -11,24 +11,33 @@ fetch("https://dummyjson.com/products/" + qstring)
 
     .then(function (data) {
         console.log(data);
-        let info = data;
+        let element = data
         let detalle = ""
+        let review = ""
 
-        let element = detalle
         detalle += `<article class="mascarilla1">
                             <img id="imagenes" src="${element.images}" alt=''>
-                            <h3>Nombre: ${element.title}</h3>
+                            <h3>${element.title}</h3>
                             <p>Precio: ${element.price}</p>
                             <p>Marca: ${element.brand}</p> 
                             <p>Descripción: ${element.description}</p>
-                            <p class="stock">Stock: ${element.stock}</p>
+                            <p>Stock: ${element.stock}</p>
                         <p class="tags">Tags:${element.tags} </p>
-                    </article>
-                    <article class="review">
-                        <p>Reviews: ${element.reviews}</p>
-                    </article>`;
-    
-       filaProduct.innerHTML += detalle
+                        <h3>Reviews</h3>
+                    </article>`
+
+        for (let i = 0; i < element.reviews.length; i++) {
+            const r = element.reviews[i];
+            review += `<article class="review">
+                    <p>Rating: ${r.rating}</p>
+                    <p>Comentario: ${r.comment}</p>
+                    <p>Fecha: ${r.date}</p>
+                    <p>Usuario: ${r.reviewerName}</p>
+                </article>`;
+
+        }
+        filaProduct.innerHTML += detalle
+        filaProduct.innerHTML += review
     })
 
     .catch(function (error) {
