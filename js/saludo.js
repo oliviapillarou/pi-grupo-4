@@ -9,7 +9,7 @@ let lista = document.querySelector(".lista1");
 if (datosObj) {
 
   saludo.innerText = `Bienvenido: ${datosObj.mail}`;
-  logout.innerHTML = `<a href="./login.html"><strong>logout</strong></a>`
+  logout.innerHTML = `<a href="./login.html" id=linklogout><strong>logout</strong></a>`
 
   lista.innerHTML = ` <li></li>
                       <li></li>`
