@@ -28,7 +28,6 @@ fetch("https://dummyjson.com/products/")
                             <h3>Name: ${element.title}</h3>
                             <p>Descripción: ${element.description}</p>
                             <p>Precio: ${element.price}</p>
-                            <p>Name: ${element.title}</p>
                             <a id="verdetalle" href="./product.html?id=${element.id}">Ver en detalle</a>
                         </article>`
         }
