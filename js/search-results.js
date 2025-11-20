@@ -60,7 +60,7 @@ fetch(searchURL)
             
         }
 
-        seccion.innerHTML = coincide;
+        seccion.innerHTML += coincide;
     })
      .catch(function (error) {
         console.log("Error: " + error);

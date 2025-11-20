@@ -23,7 +23,7 @@ fetch("https://dummyjson.com/products/" + qstring)
                             <p>Descripción: ${element.description}</p>
                             <p>Stock: ${element.stock}</p>
                         <p class="tags">Tags:${element.tags} </p>
-                        <h3>Reviews</h3>
+                        <h3 class="comentarios">Reviews</h3>
                     </article>`
 
         for (let i = 0; i < element.reviews.length; i++) {

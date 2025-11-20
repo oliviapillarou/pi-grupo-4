@@ -19,7 +19,7 @@ fetch("https://dummyjson.com/products/")
 
             if (element.category == qstring) {
                 categoria += `<article class="imagen1">
-                                <img id="imagenes" src="${element.images}" alt=''>
+                                <img id="imagenes" src="${element.images[0]}" alt=''>
                                 <h3>Nombre: ${element.title}</h3>
                                 <p>Descripción: ${element.description}</p>
                                 <p>Precio: ${element.price}</p>
