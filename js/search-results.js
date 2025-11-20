@@ -1,29 +1,70 @@
-let search = document.querySelector(".search")
-let buscador = document.querySelector(".buscador")
+let categorias= document.querySelector(".categorias-list")
+let query = new URLSearchParams(window.location.search);
+let qstring = query.get('Buscador');
 let resultadoDeBusqueda = document.querySelector(".resultadodebusqueda")
+let seccion = document.querySelector(".fila")
+let searchURL = `https://dummyjson.com/products/search?q=${qstring}`
 
-search.addEventListener("submit", function(e){
-    e.preventDefault();
-
-        let resultado = {
-            buscador: this.Buscador.value
-        }
-    
-        let resultadoString = JSON.stringify(resultado)
-        localStorage.setItem("data", resultadoString)
-        this.submit()
+fetch('https://dummyjson.com/products/categories')
+    .then(function (response) {
+        return response.json();
     })
 
-let data = localStorage.geItem("data");
-let dataObj = JSON.parse(data);
+    .then(function (data) {
 
-if (dataObj){
-    resultadoDeBusqueda.innerText = `Resultado de búsqueda para: ${dataObj.buscador}`;
-}
+        let categoria = "";
 
-else{
-    alert("No se guardaron bien los datos")
-}
+        for (let i = 0; i < data.length; i++) {
+            const element = data[i];
+
+            if (element == qstring) {
+                categoria += `<li>
+                                <a href="./category.html" class="cate">${data[i]}</a> 
+                            /</li>`
+            }
+
+        }
+
+        categorias.innerHTML += categoria
+
+    })
+
+    .catch(function (error) {
+        console.log("Error: " + error);
+    })
+
+resultadoDeBusqueda.innerText = `Resultados de búsqueda para: "${qstring}"`
+
+fetch(searchURL)
+    .then(function (response) {
+        return response.json();
+    })
+
+    .then(function (data) {
+        if (data.products.length === 0){
+          resultadoDeBusqueda.innerHTML =  `<p>No hay resultados para el término: "${qstring}"</p>`;
+          return; 
+        }
+        let coincide = "";
+
+        for (let i = 0; i < data.products.length; i++) {
+            const element = data.products[i];
+
+            coincide += `<article class="imagen1">
+                            <img id="imagenes" src="${element.images[0]}" alt=''>
+                            <h3>Nombre: ${element.title}</h3>
+                            <p>Descripción: ${element.description}</p>
+                            <p>Precio: ${element.price}</p>
+                            <a id="verdetalle" href="./product.html?id=${element.id}">Ver en detalle</a>
+                        </article>`
+            
+        }
+
+        seccion.innerHTML = coincide;
+    })
+     .catch(function (error) {
+        console.log("Error: " + error);
+    })
 
 
 /*
