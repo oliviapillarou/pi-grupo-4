@@ -16,6 +16,10 @@
     font-size: x-small;
 }
 
+#botonDiv {
+    font-size: x-small;
+}
+
 
 *{
     box-sizing: border-box;
@@ -262,6 +266,9 @@ footer {
 }
 #enviar {
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #seleccione {
     margin-bottom: 5px;
