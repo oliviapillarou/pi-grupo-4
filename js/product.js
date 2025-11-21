@@ -1,5 +1,5 @@
 
-const filaProduct = document.querySelector(".fila_product")
+const filaProduct = document.querySelector(".fila_product");
 let query = new URLSearchParams(location.search);
 let qstring = query.get('id');
 
@@ -13,18 +13,20 @@ fetch("https://dummyjson.com/products/" + qstring)
         console.log(data);
         let element = data
         let detalle = ""
+        let categoria = ""
         let review = ""
 
         detalle += `<article class="mascarilla1">
-                            <img id="imagenes" src="${element.images}" alt=''>
+                            <img id="imagenes" src="${element.images[0]}" alt=''>
                             <h3>${element.title}</h3>
                             <p>Precio: ${element.price}</p>
                             <p>Marca: ${element.brand}</p> 
                             <p>Descripción: ${element.description}</p>
                             <p>Stock: ${element.stock}</p>
-                        <p class="tags">Tags:${element.tags} </p>
-                        <h3 class="comentarios">Reviews</h3>
-                    </article>`
+                            <p>Categoría: <a href="./category.html?category=${element.category}">${element.category}</a></p>
+                            <p class="tags">Tags:${element.tags} </p>
+                            <h3 class="comentarios">Reviews</h3>
+                </article>`
 
         for (let i = 0; i < element.reviews.length; i++) {
             const r = element.reviews[i];
@@ -43,3 +45,6 @@ fetch("https://dummyjson.com/products/" + qstring)
     .catch(function (error) {
         console.log("Error: " + error);
     })
+
+
+    /*<p>Categoría:<a href="./category.html?id=${element.category}">${element.category}</a></p>*/

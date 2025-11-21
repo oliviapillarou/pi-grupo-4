@@ -67,16 +67,3 @@ fetch(searchURL)
     })
 
 
-/*
- if (buscador.value == "") {
-        divBuscador1.innerText += "Complete este campo.";
-        divBuscador2.style.display = "none";
-    }
-
-    else if (buscador.value.length < 3) {
-        divBuscador2.innerText += "Este campo debe contener al menos 3 caracteres.";
-        divBuscador1.syle.display = "none";
-    }
-
-    else{
-*/

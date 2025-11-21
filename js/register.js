@@ -1,5 +1,5 @@
 // Selectores del DOM
-let boton = document.querySelector("#info")
+let boton = document.querySelector("#Info")
 let formulario = document.querySelector("#formLogin")
 let mail = document.querySelector("#mail")
 let contraseña = document.querySelector("#contra")
@@ -45,7 +45,7 @@ formulario.addEventListener("submit", function(evento) {
          divContra.innerText = "";
     }
 
-     else if (boton != true) {
+     else if (boton.checked == false) {
         botonDiv.innerText = "Tenes que aceptar los terminos y condiciones";
          divContra2.innerText = "";
          divContra.innerText = "";
