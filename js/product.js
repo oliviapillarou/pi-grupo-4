@@ -46,5 +46,3 @@ fetch("https://dummyjson.com/products/" + qstring)
         console.log("Error: " + error);
     })
 
-
-    /*<p>Categoría:<a href="./category.html?id=${element.category}">${element.category}</a></p>*/

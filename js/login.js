@@ -6,8 +6,8 @@ let divMail = document.querySelector("#div1")
 let divContra = document.querySelector("#div2")
 let divContra2 = document.querySelector("#div3")
 
-formulario.addEventListener("submit", function(evento) {
-    
+formulario.addEventListener("submit", function (evento) {
+
     evento.preventDefault()
 
     if (mail.value == "") {
@@ -19,7 +19,7 @@ formulario.addEventListener("submit", function(evento) {
     else if (contraseña.value == "") {
         divContra.innerText = "Complete este campo.";
         divMail.innerText = "";
-         divContra2.innerText = "";
+        divContra2.innerText = "";
     }
 
     else if (contraseña.value.length < 6) {
@@ -29,20 +29,20 @@ formulario.addEventListener("submit", function(evento) {
 
     else {
         let usuario = {
-        mail: mail.value,
-        contra: contraseña.value
-        }  
+            mail: mail.value,
+            contra: contraseña.value
+        }
 
         let usuarioString = JSON.stringify(usuario);
 
         localStorage.setItem("usuario", usuarioString);
 
         this.submit()
-        
-    }
-       
 
-    
+    }
+
+
+
 
 })
 

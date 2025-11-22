@@ -3,7 +3,7 @@ let saludo1 = document.querySelector("#saludo");
 let lista1 = document.querySelector(".lista1");
 let link = document.querySelector("#linklogout")
 
-logout1.addEventListener("click", function(e) {
+logout1.addEventListener("click", function (e) {
     e.preventDefault()
     localStorage.removeItem("usuario")
     saludo.innerText = "";

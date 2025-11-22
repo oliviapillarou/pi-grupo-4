@@ -1,39 +1,11 @@
-let categorias= document.querySelector(".categorias-list")
-let query = new URLSearchParams(window.location.search);
-let qstring = query.get('Buscador');
+let qs = location.search;
+let queryObj = new URLSearchParams(qs);
+let qstring = queryObj.get('Buscador');
+
 let resultadoDeBusqueda = document.querySelector(".resultadodebusqueda")
-let seccion = document.querySelector(".fila")
+let seccion = document.querySelector(".resultado")
 let searchURL = `https://dummyjson.com/products/search?q=${qstring}`
 
-fetch('https://dummyjson.com/products/categories')
-    .then(function (response) {
-        return response.json();
-    })
-
-    .then(function (data) {
-
-        let categoria = "";
-
-        for (let i = 0; i < data.length; i++) {
-            const element = data[i];
-
-            if (element == qstring) {
-                categoria += `<li>
-                                <a href="./category.html" class="cate">${data[i]}</a> 
-                            /</li>`
-            }
-
-        }
-
-        categorias.innerHTML += categoria
-
-    })
-
-    .catch(function (error) {
-        console.log("Error: " + error);
-    })
-
-resultadoDeBusqueda.innerText = `Resultados de búsqueda para: "${qstring}"`
 
 fetch(searchURL)
     .then(function (response) {
@@ -41,10 +13,13 @@ fetch(searchURL)
     })
 
     .then(function (data) {
-        if (data.products.length === 0){
-          resultadoDeBusqueda.innerHTML =  `<p>No hay resultados para el término: "${qstring}"</p>`;
-          return; 
+        if (data.products.length === 0) {
+            resultadoDeBusqueda.innerHTML = `<p>No hay resultados para el término: "${qstring}"</p>`;
+            return;
         }
+
+        resultadoDeBusqueda.innerText = `Resultados de búsqueda para: "${qstring}"`
+
         let coincide = "";
 
         for (let i = 0; i < data.products.length; i++) {
@@ -57,12 +32,13 @@ fetch(searchURL)
                             <p>Precio: ${element.price}</p>
                             <a id="verdetalle" href="./product.html?id=${element.id}">Ver en detalle</a>
                         </article>`
-            
+
         }
 
-        seccion.innerHTML += coincide;
+        seccion.innerHTML = coincide;
+
     })
-     .catch(function (error) {
+    .catch(function (error) {
         console.log("Error: " + error);
     })
 

@@ -12,8 +12,8 @@ let divReContra = document.querySelector("#div4")
 let divAcepto = document.querySelector("#div5")
 let divInfo = document.querySelector("#botonDiv")
 
-formulario.addEventListener("submit", function(evento) {
-    
+formulario.addEventListener("submit", function (evento) {
+
     evento.preventDefault()
 
     if (mail.value == "") {
@@ -25,7 +25,7 @@ formulario.addEventListener("submit", function(evento) {
     else if (contraseña.value == "") {
         divContra.innerText = "Complete este campo.";
         divMail.innerText = "";
-         divContra2.innerText = "";
+        divContra2.innerText = "";
     }
 
     else if (contraseña.value.length < 6) {
@@ -35,25 +35,25 @@ formulario.addEventListener("submit", function(evento) {
 
     else if (reContra.value == "") {
         divReContra.innerText = "Complete este campo";
-         divContra2.innerText = "";
-         divContra.innerText = "";
-    }
-    
-    else if (reContra.value != contraseña.value) {
-        divReContra.innerText = "La contraseña tiene que ser igual";
-         divContra2.innerText = "";
-         divContra.innerText = "";
+        divContra2.innerText = "";
+        divContra.innerText = "";
     }
 
-     else if (boton.checked == false) {
+    else if (reContra.value != contraseña.value) {
+        divReContra.innerText = "La contraseña tiene que ser igual";
+        divContra2.innerText = "";
+        divContra.innerText = "";
+    }
+
+    else if (boton.checked == false) {
         botonDiv.innerText = "Tenes que aceptar los terminos y condiciones";
-         divContra2.innerText = "";
-         divContra.innerText = "";
+        divContra2.innerText = "";
+        divContra.innerText = "";
     }
 
     else {
-        this.submit()  
+        this.submit()
     }
-       
+
 })
 

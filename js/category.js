@@ -2,40 +2,9 @@
 const filaCategoria = document.querySelector(".fila")
 let query2 = new URLSearchParams(location.search);
 let qstring2 = query2.get('category');
-let categoria2 = document.querySelector("#section1")
-
-fetch('https://dummyjson.com/products/categories')
-    .then(function (response) {
-        return response.json();
-    })
-
-    .then(function (data) {
-
-        let categoria = "";
-
-        for (let i = 0; i < data.length; i++) {
-            const element = data[i];
-
-                categoria += `<ul class="ul">
-                            <li class="menu"><a href="./category.html?category=${element.slug}"> ${element.name}</a></li>
-                             </ul>`
-    
-        }
-
-        categoria2.innerHTML = categoria
-
-    })
-
-    .catch(function (error) {
-        console.log("Error: " + error);
-    })
 
 
-
-
-
-
-fetch("https://dummyjson.com/products/")
+fetch(`https://dummyjson.com/products/category/${qstring2}`)
     .then(function (response) {
         return response.json();
     })
